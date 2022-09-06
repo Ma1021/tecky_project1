@@ -1,0 +1,285 @@
+:root {
+  --red: #e61b1b;
+  --orange: #ffaa00;
+  --yellow: #ffe600;
+  --green: #26e600;
+  --blue: #004de6;
+  --purple: #6600cc;
+}
+
+body {
+  margin: 0;
+}
+
+body #containerWhole {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+  background-color: white;
+
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: "Silkscreen", cursive;
+}
+
+#gameContainer {
+  height: 100%;
+  padding: 0 3rem 3rem 3rem;
+  border: 1rem black solid;
+  border-radius: 10rem;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-top: 3rem;
+}
+
+header > h1 {
+  text-align: center;
+  font-family: "Silkscreen", cursive;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: black;
+}
+
+h1 span {
+  color: white;
+  text-shadow: none;
+}
+
+header #gameProgress {
+  display: flex;
+  justify-content: center;
+}
+
+header #gameProgress > .gameBtn {
+  margin: 0 2rem;
+  background-color: transparent;
+  border: 0.5rem solid black;
+  transition: 0.3s background-color;
+  box-shadow: 7px 7px 0px #a5a0a0;
+}
+
+header #gameProgress > .gameBtn#start:hover {
+  background-color: var(--green);
+}
+
+header #gameProgress > .gameBtn#pause:hover {
+  background-color: var(--red);
+}
+
+header #gameProgress > .gameBtn#reset:hover {
+  background-color: var(--blue);
+}
+
+header #rules {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+header #rules .rule {
+  margin: 0 1rem;
+}
+
+header #colorPicks {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header #colorPicks .colorPick {
+  margin-inline-end: 1rem;
+}
+
+.colorPick #colorBtnRed {
+  background-color: var(--red);
+}
+.colorPick #colorBtnOrange {
+  background-color: var(--orange);
+}
+.colorPick #colorBtnYellow {
+  background-color: var(--yellow);
+}
+.colorPick #colorBtnGreen {
+  background-color: var(--green);
+}
+.colorPick #colorBtnBlue {
+  background-color: var(--blue);
+}
+.colorPick #colorBtnPurple {
+  background-color: var(--purple);
+}
+
+#canvas {
+  flex-grow: 1;
+}
+/*------------------------ for dark button --------------------------- */
+#mode {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  background-color: black;
+  border: black 0.2rem solid;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+/*------------------------ for secret channel --------------------------- */
+#secret {
+  font-size: 1rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-family: "Libre Barcode 39", cursive;
+}
+
+#secret.hidden {
+  display: none;
+}
+
+/*------------------------ for gameOfLife dark --------------------------- */
+.darkModeLife#containerWhole {
+  background-color: black;
+  color: white;
+}
+.darkModeLife #gameContainer {
+  border: 1rem White solid;
+}
+.darkModeLife #gameProgress > .gameBtn {
+  /* background-color: white; */
+  border: 0.5rem solid white;
+  color: white;
+  transition: 0.3s background-color;
+  box-shadow: none;
+}
+
+.darkModeLife header #colorPicks .colorPick > button {
+  color: white;
+  border: 0.1rem white solid;
+}
+
+.darkModeLife h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+/*------------------- for minesweeper dark --------------------------- */
+#containerWholeMine.darkModeLife {
+  background-color: black;
+  color: white;
+}
+
+/*------------------------ for minesweeper --------------------------- */
+#containerWholeMine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  max-height: calc(100vh + 4rem);
+  min-height: 100vh;
+  font-family: "Silkscreen", cursive;
+  color: black;
+}
+
+#containerWholeMine #gameContainer {
+  height: auto;
+}
+
+#containerWholeMine h1 {
+  margin: 1rem 0;
+}
+
+button {
+  font-family: "Silkscreen", cursive;
+}
+.boxContainerPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  outline: 1px solid black;
+  display: flex;
+}
+#gameProgress #reset {
+  font-family: "Silkscreen", cursive;
+}
+.box {
+  outline: 1px solid black;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  /* need to fix the size */
+  background-size: cover;
+}
+#gameDifficulty {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+img {
+  width: 30px;
+}
+.mine {
+  background-image: url("../img/mine.png");
+}
+.pressed {
+  background-image: url("../img/pressed.png");
+}
+.flag {
+  background-image: url("../img/flag.png");
+}
+.one {
+  background-image: url("../img/one.png");
+}
+.two {
+  background-image: url("../img/two.png");
+}
+.three {
+  background-image: url("../img/three.png");
+}
+.four {
+  background-image: url("../img/four.png");
+}
+.five {
+  background-image: url("../img/five.png");
+}
+.six {
+  background-image: url("../img/six.png");
+}
+.seven {
+  background-image: url("../img/seven.png");
+}
+.eight {
+  background-image: url("../img/eight.png");
+}
+
+.warning {
+  display: none;
+}

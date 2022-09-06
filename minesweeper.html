@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Silkscreen:wght@400;700&family=Skranji&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font -->
+    <link rel="stylesheet" href="gameOfLife.css" />
+
+  </head>
+  <body>
+    <div class="warning">You really want to cheat??????</div>
+    <div class="warning">You are not that stupid right?</div>
+    <div id="containerWholeMine">
+      <div id="gameContainer">
+        <header>
+          <div id="modes">
+            <button id="mode">dark</button>
+          </div>
+          <h1>Minesweeper<span id="changeGame">?</span><input class="hidden" id="secret" type="text" /></h1>
+          <div id="gameControls">
+            
+            <div id="gameProgress">
+              <button class="gameBtn" id="reset">Reset</button>
+            </div>
+            <div id="gameDifficulty">
+              Difficulty:
+              <select name="difficulty" id="difficulty">
+                <option selected="selected" value="easy">Easy</option>
+                <option value="middle">Middle</option>
+                <option value="difficult">Difficult</option>
+              </select>
+            </div>
+        </header>
+        <div class="box"></div>
+
+        <div class="boxContainerPosition">
+          <div class="boxContainer"></div>
+        </div>
+        <img src="../img/covered.png" alt="covered box" class="covered">
+
+        <img src="../img/flag.png" alt="flag" class="flag">
+        <!-- <div id="canvas"></div> -->
+      </div>
+    </div>
+
+    <!-- keep script here -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+    <script src="minesweeper.js"></script>
+    <script src="mode.js"></script>
+
+    <!-- <script src=".js"></script> -->
+  </body>
+</html>
